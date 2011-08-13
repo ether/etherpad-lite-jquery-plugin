@@ -14,24 +14,16 @@ The Etherpad jQuery Plugin Example plugin easily allows you to add a pad from Et
 <div id="examplePadIntense"></div>
 
 # Available options and parameters
+<pre>
 'host'     : 'http://beta.etherpad.org', // the host and port of the Etherpad instance, by default the foundation will host your pads for you
 'baseUrl'  : '/p/', // The base URL of the pads
 'showControls'     : false, // If you want to show controls IE bold, italic etc.
 'showChat' : false, // If you want to show the chat button or not
 'showLineNumbers'  : false, // If you want to show the line numbers or not
 'userName' : 'unnamed' // The username you want to pass to the pad.
-
-<script type="text/javascript">
-// The most basic example
-$('#examplePadBasic').pad({'padId':'test'}); // sets the pad id and puts the pad in the div
-
-// A slightly more intense example
-$('#examplePadIntense').pad({'padId':'test2','showChat':'true'}); // sets the pad id and puts the pad in the div
-</script>
-
-
+</pre>
 
 # Copyright
-jQuery Etherpad plugin written by John McLear (c) Primary Technology 2011
+jQuery Etherpad plugin written by John McLear (c) Primary Technology 2011<br/>
 Feel free to re-use, distribute, butcher, edit and whatever else you want.
 It's under the Apache licence.
