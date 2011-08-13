@@ -13,6 +13,10 @@ The Etherpad jQuery Plugin Example plugin easily allows you to add a pad from Et
 <pre>$('#examplePadBasic').pad({'padId':'test','showChat':'true'});</pre>
 <div id="examplePadIntense"></div>
 
+<h3>Example #3: Gets the padContents from Example #2</h2>
+<pre>$('#examplePadBasic').pad({'getContents':'exampleGetContents'});</pre>
+<div id="exampleGetContents"><a id="contents" onClick="$('#examplePadBasic').pad({'getContents':'exampleGetContents'});">Click me to Replace me with the pad contents</a></div>
+
 # Available options and parameters
 <pre>
 'host'     : 'http://beta.etherpad.org', // the host and port of the Etherpad instance, by default the foundation will host your pads for you
