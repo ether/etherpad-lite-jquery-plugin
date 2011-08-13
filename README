@@ -1,0 +1,6 @@
+jQuery Etherpad plugin written by John McLear (c) Primary Technology 2011
+Feel free to re-use, distribute, butcher, edit and whatever else you want.
+
+Installation is easy, just include the .js file in your html and refer to it using: $('#element').pad();
+
+
