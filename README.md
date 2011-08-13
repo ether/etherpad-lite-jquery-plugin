@@ -20,7 +20,8 @@ The Etherpad jQuery Plugin Example plugin easily allows you to add a pad from Et
 'showControls'     : false, // If you want to show controls IE bold, italic etc.
 'showChat' : false, // If you want to show the chat button or not
 'showLineNumbers'  : false, // If you want to show the line numbers or not
-'userName' : 'unnamed' // The username you want to pass to the pad.
+'userName' : 'unnamed', // The username you want to pass to the pad.
+'useMonospaceFont' : false // Use monospaced fonts
 </pre>
 
 # Copyright
