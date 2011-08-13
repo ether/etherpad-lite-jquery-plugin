@@ -13,7 +13,7 @@ The Etherpad jQuery Plugin Example plugin easily allows you to add a pad from Et
 <pre>$('#examplePadBasic').pad({'padId':'test','showChat':'true'});</pre>
 <div id="examplePadIntense"></div>
 
-<h3>Example #3: Gets the padContents from Example #2</h2>
+<h2>Example #3: Gets the padContents from Example #2 and writes it to the target div "exampleGetContents"</h2>
 <pre>$('#examplePadBasic').pad({'getContents':'exampleGetContents'});</pre>
 <div id="exampleGetContents"><a id="contents" onClick="$('#examplePadBasic').pad({'getContents':'exampleGetContents'});">Click me to Replace me with the pad contents</a></div>
 
