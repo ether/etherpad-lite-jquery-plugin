@@ -17,7 +17,7 @@
       { 
         $.extend( settings, options );
       }
-      var iFrameLink = '<iframe src="'+settings.host+settings.baseUrl+settings.padId+'?showControls='+settings.showControls+'&showChat='+settings.showChat+'&showLineNumbers='+settings.showLineNumbers+'&useMonospaceFont='settings.useMonospaceFont+'"></iframe>';
+      var iFrameLink = '<iframe src="'+settings.host+settings.baseUrl+settings.padId+'?showControls='+settings.showControls+'&showChat='+settings.showChat+'&showLineNumbers='+settings.showLineNumbers+'&useMonospaceFont='+settings.useMonospaceFont+'"></iframe>';
       console.log(iFrameLink);
       this.html(iFrameLink);
     }
@@ -25,7 +25,7 @@
     if (options == 'getContents')
     {
       var url = $(this).get(0).location.href
-
+alert(url);
       // get the contents of this.
       // get the link of the iframe using host + pathanme
 
