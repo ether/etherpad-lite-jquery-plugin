@@ -1,6 +1,7 @@
 # Description
 
-The Etherpad jQuery Plugin Example plugin easily allows you to add a pad from Etherpad in a web page.  It injects the pad contents into a div using iframes.
+The Etherpad jQuery Plugin Example plugin easily allows you to add and access a pad from Etherpad in a web page.  The plugin injects the pad contents into a div using iframes.  It can also read the contents of a Pad and write it to a div.
+
 
 # Usage
 <p>Include jQuery.js, include etherpad.js, assign a pad to a div.  If you get confused look at the examples in index.html</p>
@@ -15,7 +16,6 @@ The Etherpad jQuery Plugin Example plugin easily allows you to add a pad from Et
 
 <h2>Example #3: Gets the padContents from Example #2 and writes it to the target div "exampleGetContents"</h2>
 <pre>$('#examplePadBasic').pad({'getContents':'exampleGetContents'});</pre>
-<div id="exampleGetContents"><a id="contents" onClick="$('#examplePadBasic').pad({'getContents':'exampleGetContents'});">Click me to Replace me with the pad contents</a></div>
 
 # Available options and parameters
 <pre>
