@@ -2,7 +2,7 @@
 
   $.fn.pad = function( options ) {
     var settings = {
-      'host'		 : 'http://beta.etherpad.org',
+      'host'		 : 'http://10.0.0.55:9001',
       'baseUrl'		 : '/p/',
       'showControls'     : false,
       'showChat'	 : false,
@@ -37,11 +37,11 @@
       if (frameUrl.indexOf("?")>-1){
         frameUrl = frameUrl.substr(0,frameUrl.indexOf("?"));
       }
-      var contentsUrl = frameUrl + "/export/txt";
+      var contentsUrl = frameUrl + "/export/html";
 
       // perform an ajax call on contentsUrl and write it to the parent
       $.get(contentsUrl, function(data) {
-        $(targetDiv).html(data);
+      $('#'+targetDiv).html(data);
       });
     }
   };
