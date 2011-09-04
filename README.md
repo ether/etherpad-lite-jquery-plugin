@@ -26,6 +26,7 @@ The Etherpad jQuery Plugin Example plugin easily allows you to add and access a 
 'showLineNumbers'  : false, // If you want to show the line numbers or not
 'userName' : 'unnamed', // The username you want to pass to the pad.
 'useMonospaceFont' : false // Use monospaced fonts
+'noColors' : false // Disable background colors on author text
 </pre>
 
 # Copyright
