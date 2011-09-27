@@ -21,7 +21,7 @@
       }
       var epframe = this.attr('id');
       var iFrameLink = '<iframe id="epframe'+epframe+'" src="'+settings.host+settings.baseUrl+settings.padId+'?showControls='+settings.showControls+'&showChat='+settings.showChat+'&showLineNumbers='+settings.showLineNumbers+'&useMonospaceFont='+settings.useMonospaceFont+'&userName=' + settings.userName + '&noColors=' + settings.noColors + '"></iframe>';
-      console.log(iFrameLink);
+      // console.log(iFrameLink);
       this.html(iFrameLink);
     }
 
