@@ -1,0 +1,9 @@
+{
+  "name": "Etherpad Lite",
+  "description": "jQuery Etherpad Lite collaborative editor plugin.",
+  "version": "1.0.0",
+  "author": "John McLear <john@mclear.co.uk>",
+  "dependencies": {
+    "jquery": ">= 1.0"
+  }
+}
