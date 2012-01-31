@@ -10,7 +10,9 @@
       'userName'	 : 'unnamed',
       'useMonospaceFont' : false,
       'noColors'         : false,
-      'hideQRCode'	 : false
+      'hideQRCode'	 : false,
+      'width'   : 100,
+      'height'  : 100
     };
 
     // This writes a new frame if required
@@ -21,7 +23,7 @@
         $.extend( settings, options );
       }
       var epframe = this.attr('id');
-      var iFrameLink = '<iframe id="epframe'+epframe+'" src="'+settings.host+settings.baseUrl+settings.padId+'?showControls='+settings.showControls+'&showChat='+settings.showChat+'&showLineNumbers='+settings.showLineNumbers+'&useMonospaceFont='+settings.useMonospaceFont+'&userName=' + settings.userName + '&noColors=' + settings.noColors + '&hideQRCode=' + settings.hideQRCode + '"></iframe>';
+      var iFrameLink = '<iframe id="epframe'+epframe+'" src="'+settings.host+settings.baseUrl+settings.padId+'?showControls='+settings.showControls+'&showChat='+settings.showChat+'&showLineNumbers='+settings.showLineNumbers+'&useMonospaceFont='+settings.useMonospaceFont+'&userName=' + settings.userName + '&noColors=' + settings.noColors + '&hideQRCode=' + settings.hideQRCode + '" style="border: 0; width: '+settings.width+'; height: '+settings.height+';"></iframe>';
       // console.log(iFrameLink);
       this.html(iFrameLink);
     }
