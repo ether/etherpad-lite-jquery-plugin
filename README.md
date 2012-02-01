@@ -19,14 +19,17 @@ The Etherpad jQuery Plugin Example plugin easily allows you to add and access a 
 
 # Available options and parameters
 <pre>
-'host'     : 'http://beta.etherpad.org', // the host and port of the Etherpad instance, by default the foundation will host your pads for you
-'baseUrl'  : '/p/', // The base URL of the pads
-'showControls'     : false, // If you want to show controls IE bold, italic etc.
-'showChat' : false, // If you want to show the chat button or not
+'host'             : 'http://beta.etherpad.org', // the host and port of the Etherpad instance, by default the foundation will host your pads for you
+'baseUrl'          : '/p/', // The base URL of the pads
+'showControls'     : false, // If you want to show controls IE bold, italic, etc.
+'showChat'         : false, // If you want to show the chat button or not
 'showLineNumbers'  : false, // If you want to show the line numbers or not
-'userName' : 'unnamed', // The username you want to pass to the pad.
-'useMonospaceFont' : false // Use monospaced fonts
-'noColors' : false // Disable background colors on author text
+'userName'         : 'unnamed', // The username you want to pass to the pad
+'useMonospaceFont' : false, // Use monospaced fonts
+'noColors'         : false, // Disable background colors on author text
+'hideQRCode'       : false // Hide QR code
+'width'            : 100, // The width of the embedded IFrame
+'height'           : 100, // The height of the embedded IFrame
 </pre>
 
 # Copyright
