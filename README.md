@@ -29,7 +29,7 @@ The Etherpad jQuery Plugin Example plugin easily allows you to add and access a 
 'noColors'         : false, // Disable background colors on author text
 'hideQRCode'       : false // Hide QR code
 'width'            : 100, // The width of the embedded IFrame
-'height'           : 100, // The height of the embedded IFrame
+'height'           : 100  // The height of the embedded IFrame
 </pre>
 
 # Copyright
