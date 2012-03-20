@@ -14,41 +14,84 @@
       'width'             : 100,
       'height'            : 100,
       'border'            : 0,
-      'borderStyle'       : 'solid'
+      'borderStyle'       : 'solid',
+      'toggleTextOn'      : 'Disable Rich-text',
+      'toggleTextOff'     : 'Enable Rich-text'
     };
-
+    
+    var $self = this;
+    if (!$self.length) return;
+    if (!$self.attr('id')) throw new Error('No "id" attribute');
+    
+    var useValue = $self[0].tagName.toLowerCase() == 'textarea';
+    var selfId = $self.attr('id');
+    var epframeId = 'epframe'+ selfId;
     // This writes a new frame if required
-    if ( !options.getContents )
-    {
-      if ( options )
-      {
+    if ( !options.getContents ) {
+      if ( options ) {
         $.extend( settings, options );
       }
-      var epframe = this.attr('id');
-      var iFrameLink = '<iframe id="epframe'+epframe+'" src="'+settings.host+settings.baseUrl+settings.padId+'?showControls='+settings.showControls+'&showChat='+settings.showChat+'&showLineNumbers='+settings.showLineNumbers+'&useMonospaceFont='+settings.useMonospaceFont+'&userName=' + settings.userName + '&noColors=' + settings.noColors + '&hideQRCode=' + settings.hideQRCode + '" style="border: '+settings.border+'; border-style: '+settings.borderStyle+'; width: '+settings.width+'; height: '+settings.height+';"></iframe>';
-      // console.log(iFrameLink);
-      this.html(iFrameLink);
+      
+      var iFrameLink = '<iframe id="'+epframeId;
+          iFrameLink = iFrameLink +'" name="'+epframeId;
+          iFrameLink = iFrameLink +'" src="'+settings.host+settings.baseUrl+settings.padId;
+          iFrameLink = iFrameLink + '?showControls='+settings.showControls;
+          iFrameLink = iFrameLink + '&showChat='+settings.showChat;
+          iFrameLink = iFrameLink + '&showLineNumbers='+settings.showLineNumbers;
+          iFrameLink = iFrameLink + '&useMonospaceFont='+settings.useMonospaceFont;
+          iFrameLink = iFrameLink + '&userName=' + settings.userName;
+          iFrameLink = iFrameLink + '&noColors=' + settings.noColors;
+          iFrameLink = iFrameLink + '&hideQRCode=' + settings.hideQRCode;
+          iFrameLink = iFrameLink +'" style="border:'+settings.border;
+          iFrameLink = iFrameLink +'; border-style:'+settings.borderStyle;
+//          iFrameLink = iFrameLink +'; width:'+settings.width;
+//          iFrameLink = iFrameLink +'; height:'+settings.height;
+          iFrameLink = iFrameLink +';" width="'+ '100%';//settings.width;
+          iFrameLink = iFrameLink +'" height="'+ settings.height; 
+          iFrameLink = iFrameLink +'"></iframe>';
+      
+      
+      var $iFrameLink = $(iFrameLink);
+      
+      if (useValue) {
+        var $toggleLink = $('<a href="#'+ selfId +'">'+ settings.toggleTextOn +'</a>').click(function(){
+          var $this = $(this);
+          $this.toggleClass('active');
+          if ($this.hasClass('active')) $this.text(settings.toggleTextOff);
+          $self.pad({getContents: true});
+          return false;
+        });
+        $self
+          .hide()
+          .after($toggleLink)
+          .after($iFrameLink)
+        ;
+      }
+      else {      
+        $self.html(iFrameLink);
+      }
     }
 
     // This reads the etherpad contents if required
-    if ( options.getContents )
-    {
-      // Specify the target Div
-      var targetDiv = options.getContents;
-
-      // Get the frame properties and provide us with an export path
-      var frameID = this.attr('id');
-      var epframe = "epframe"+frameID;
-      var frameUrl = document.getElementById(epframe).src;
-      if (frameUrl.indexOf("?")>-1){
-        frameUrl = frameUrl.substr(0,frameUrl.indexOf("?"));
-      }
+    else {
+      var frameUrl = $('#'+ epframeId).attr('src').split('?')[0];
       var contentsUrl = frameUrl + "/export/html";
 
       // perform an ajax call on contentsUrl and write it to the parent
       $.get(contentsUrl, function(data) {
-      $('#'+targetDiv).html(data);
+        
+        if (useValue) {
+          $self.val(data).show();
+        }
+        else {
+          $self.html(data);
+        }
+        
+        $('#'+ epframeId).remove();
       });
     }
+    
+    
+    return $self;
   };
 })( jQuery );
