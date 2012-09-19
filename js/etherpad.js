@@ -76,15 +76,16 @@
     else {
       var frameUrl = $('#'+ epframeId).attr('src').split('?')[0];
       var contentsUrl = frameUrl + "/export/html";
+      var target = $('#'+ options.getContents);
 
       // perform an ajax call on contentsUrl and write it to the parent
       $.get(contentsUrl, function(data) {
         
-        if (useValue) {
-          $self.val(data).show();
+        if (target.is(':input')) {
+          target.val(data).show();
         }
         else {
-          $self.html(data);
+          target.html(data);
         }
         
         $('#'+ epframeId).remove();
