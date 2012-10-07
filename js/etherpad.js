@@ -10,6 +10,7 @@
       'userName'          : 'unnamed',
       'useMonospaceFont'  : false,
       'noColors'          : false,
+      'userColor'         : false,
       'hideQRCode'        : false,
       'width'             : 100,
       'height'            : 100,
@@ -41,11 +42,10 @@
           iFrameLink = iFrameLink + '&useMonospaceFont='+settings.useMonospaceFont;
           iFrameLink = iFrameLink + '&userName=' + settings.userName;
           iFrameLink = iFrameLink + '&noColors=' + settings.noColors;
+          iFrameLink = iFrameLink + '&userColor=' + settings.userColor;
           iFrameLink = iFrameLink + '&hideQRCode=' + settings.hideQRCode;
           iFrameLink = iFrameLink +'" style="border:'+settings.border;
           iFrameLink = iFrameLink +'; border-style:'+settings.borderStyle;
-//          iFrameLink = iFrameLink +'; width:'+settings.width;
-//          iFrameLink = iFrameLink +'; height:'+settings.height;
           iFrameLink = iFrameLink +';" width="'+ '100%';//settings.width;
           iFrameLink = iFrameLink +'" height="'+ settings.height; 
           iFrameLink = iFrameLink +'"></iframe>';
