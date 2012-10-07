@@ -12,6 +12,7 @@
       'noColors'          : false,
       'userColor'         : false,
       'hideQRCode'        : false,
+      'alwaysShowChat'    : false,
       'width'             : 100,
       'height'            : 100,
       'border'            : 0,
@@ -44,6 +45,7 @@
           iFrameLink = iFrameLink + '&noColors=' + settings.noColors;
           iFrameLink = iFrameLink + '&userColor=' + settings.userColor;
           iFrameLink = iFrameLink + '&hideQRCode=' + settings.hideQRCode;
+          iFrameLink = iFrameLink + '&alwaysShowChat=' + settings.alwaysShowChat;
           iFrameLink = iFrameLink +'" style="border:'+settings.border;
           iFrameLink = iFrameLink +'; border-style:'+settings.borderStyle;
           iFrameLink = iFrameLink +';" width="'+ '100%';//settings.width;

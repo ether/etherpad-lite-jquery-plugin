@@ -29,6 +29,7 @@ The Etherpad jQuery Plugin Example plugin easily allows you to add and access a 
 'noColors'         : false, // Disable background colors on author text
 'userColor'        : false, // The background color of this authors text in hex format IE #000
 'hideQRCode'       : false, // Hide QR code
+'alwaysShowChat'   : false, // Always show the chat on the UI
 'width'            : 100, // The width of the embedded IFrame
 'height'           : 100,  // The height of the embedded IFrame
 'border'           : 0,    // The width of the border (make sure to append px to a numerical value)
