@@ -1,9 +1,24 @@
 {
-  "name": "Etherpad Lite",
-  "description": "jQuery Etherpad Lite collaborative editor plugin.",
+  "name": "etherpad",
+  "title": "jQuery Etherpad",
+  "description": "jQuery plugin for embedding Etherpad",
+  "keywords": [
+    "color",
+    "animation"
+  ],
   "version": "1.0.1",
-  "author": "John McLear <john@mclear.co.uk>",
+  "author": {
+    "name": "John McLear",
+    "url": "https://github.com/ether/etherpad-lite-jquery-plugin"
+  },
+  "licenses": [
+    {
+      "type": "Apache 2"
+    }
+  ],
+  "bugs": "https://github.com/ether/etherpad-lite-jquery-plugin/issues/",
+  "homepage": "https://etherpad.org",
   "dependencies": {
-    "jquery": ">= 1.0"
+    "jquery": ">=1.5"
   }
 }
