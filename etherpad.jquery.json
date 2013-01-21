@@ -18,7 +18,7 @@
     }
   ],
   "bugs": "https://github.com/ether/etherpad-lite-jquery-plugin/issues/",
-  "homepage": "http://etherpad.org",
+  "homepage": "https://github.com/ether/etherpad-lite-jquery-plugin",
   "dependencies": {
     "jquery": ">=1.5"
   }
