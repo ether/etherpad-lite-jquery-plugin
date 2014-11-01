@@ -32,7 +32,8 @@ The Etherpad jQuery Plugin easily allows you to embed and access a pad from Ethe
 'width'            : 100, // The width of the embedded IFrame
 'height'           : 100,  // The height of the embedded IFrame
 'border'           : 0,    // The width of the border (make sure to append px to a numerical value)
-'borderStyle'      : 'solid' // The CSS style of the border	[none, dotted, dashed, solid, double, groove, ridge, inset, outset]
+'borderStyle'      : 'solid', // The CSS style of the border	[none, dotted, dashed, solid, double, groove, ridge, inset, outset]
+'rtl'              : false // Show text from right to left
 </pre>
 
 # Copyright
