@@ -44,8 +44,9 @@
           iFrameLink = iFrameLink + '&showLineNumbers=' + settings.showLineNumbers;
           iFrameLink = iFrameLink + '&useMonospaceFont=' + settings.useMonospaceFont;
           iFrameLink = iFrameLink + '&userName=' + settings.userName;
-          if (settings.lang)
+          if (settings.lang) {
             iFrameLink = iFrameLink + '&lang=' + settings.lang;
+          }
           iFrameLink = iFrameLink + '&noColors=' + settings.noColors;
           iFrameLink = iFrameLink + '&userColor=' + settings.userColor;
           iFrameLink = iFrameLink + '&hideQRCode=' + settings.hideQRCode;
