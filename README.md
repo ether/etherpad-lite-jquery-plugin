@@ -10,7 +10,7 @@ The Etherpad jQuery Plugin easily allows you to embed and access a pad from Ethe
 <div id="examplePadBasic"></div>
 
 ### Sets the pad id, some more parameters and puts the pad in the div
-`$('#examplePadBasic').pad({'padId':'test','showChat':'true'});`
+`$('#examplePadBasic').pad({'padId':'test','showChat':true});`
 <div id="examplePadIntense"></div>
 
 ### Gets the padContents from Example #2 and writes it to the target div "exampleGetContents"
