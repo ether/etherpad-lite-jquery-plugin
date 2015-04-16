@@ -34,6 +34,7 @@ The Etherpad jQuery Plugin easily allows you to embed and access a pad from Ethe
 'border'           : 0,    // The width of the border (make sure to append px to a numerical value)
 'borderStyle'      : 'solid', // The CSS style of the border	[none, dotted, dashed, solid, double, groove, ridge, inset, outset]
 'rtl'              : false // Show text from right to left
+'pageview'         : false // Display page view when opening the pad (requires ep_page_view plugin)
 </pre>
 
 # Copyright
