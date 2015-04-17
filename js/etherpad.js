@@ -14,13 +14,13 @@
       'userColor'         : false,
       'hideQRCode'        : false,
       'alwaysShowChat'    : false,
-      'pageview'          : false,
       'width'             : 100,
       'height'            : 100,
       'border'            : 0,
       'borderStyle'       : 'solid',
       'toggleTextOn'      : 'Disable Rich-text',
       'toggleTextOff'     : 'Enable Rich-text',
+      'plugins'           : {},
       'rtl'               : false
     };
     
@@ -37,6 +37,11 @@
         $.extend( settings, options );
       }
       
+      var pluginParams = '';
+      for(var option in settings.plugins) {
+        pluginParams += '&' + option + '=' + settings.plugins[option]
+      }
+
       var iFrameLink = '<iframe id="'+epframeId;
           iFrameLink = iFrameLink +'" name="' + epframeId;
           iFrameLink = iFrameLink +'" src="' + settings.host+settings.baseUrl+settings.padId;
@@ -52,8 +57,8 @@
           iFrameLink = iFrameLink + '&userColor=' + settings.userColor;
           iFrameLink = iFrameLink + '&hideQRCode=' + settings.hideQRCode;
           iFrameLink = iFrameLink + '&alwaysShowChat=' + settings.alwaysShowChat;
-          iFrameLink = iFrameLink + '&pageview=' + settings.pageview;
           iFrameLink = iFrameLink + '&rtl=' + settings.rtl;
+          iFrameLink = iFrameLink + pluginParams;
           iFrameLink = iFrameLink +'" style="border:' + settings.border;
           iFrameLink = iFrameLink +'; border-style:' + settings.borderStyle;
           iFrameLink = iFrameLink +';" width="' + '100%';//settings.width;

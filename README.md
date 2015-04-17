@@ -13,6 +13,10 @@ The Etherpad jQuery Plugin easily allows you to embed and access a pad from Ethe
 `$('#examplePadBasic').pad({'padId':'test','showChat':true});`
 <div id="examplePadIntense"></div>
 
+### Sets the pad id, some plugin parameters and puts the pad in the div
+`$('#examplePadPlugins').pad({'padId':'test','plugins':{'pageview':'true'}});`
+<div id="examplePadPlugins"></div>
+
 ### Gets the padContents from Example #2 and writes it to the target div "exampleGetContents"
 `$('#examplePadBasic').pad({'getContents':'exampleGetContents'});`
 
@@ -29,11 +33,11 @@ The Etherpad jQuery Plugin easily allows you to embed and access a pad from Ethe
 'userColor'        : false, // The background color of this authors text in hex format IE #000
 'hideQRCode'       : false, // Hide QR code
 'alwaysShowChat'   : false, // Always show the chat on the UI
-'pageview'         : false, // Display page view when opening the pad (requires ep_page_view plugin)
 'width'            : 100, // The width of the embedded IFrame
 'height'           : 100,  // The height of the embedded IFrame
 'border'           : 0,    // The width of the border (make sure to append px to a numerical value)
 'borderStyle'      : 'solid', // The CSS style of the border	[none, dotted, dashed, solid, double, groove, ridge, inset, outset]
+'plugins'          : {}, // The options related to the plugins, not to the basic Etherpad configuration
 'rtl'              : false // Show text from right to left
 </pre>
 
